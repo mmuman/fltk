@@ -473,6 +473,7 @@ sudoku: sudoku.o
 	$(OSX_ONLY) $(RM) -r -f sudoku.app/Contents/MacOS
 	$(OSX_ONLY) mkdir sudoku.app/Contents/MacOS
 	$(OSX_ONLY) $(INSTALL_BIN) sudoku$(EXEEXT) sudoku.app/Contents/MacOS
+	$(HAIKU_ONLY) ../fltk-config --post $@
 
 sudoku.exe: sudoku.o sudoku.rc
 	echo Linking $@...
