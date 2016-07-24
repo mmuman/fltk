@@ -19,9 +19,9 @@
  * This file is required on all platforms for UTF-8 support
  */
 
-#if !defined(WIN32) && !defined(__APPLE__)
+#if !defined(WIN32) && !defined(__APPLE__) && !defined(__HAIKU__)
 #  include "../Xutf8.h"
-#endif /* !defined(WIN32) && !defined(__APPLE__) */
+#endif /* !defined(WIN32) && !defined(__APPLE__) && !defined(__HAIKU__) */
 
 #include "headers/case.h"
 #include <stdlib.h>
