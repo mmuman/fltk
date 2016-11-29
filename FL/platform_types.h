@@ -134,6 +134,17 @@ typedef struct __GLXcontextRec *GLContext;
 #include <sys/types.h>
 #include <dirent.h>
 
+#elif defined(__HAIKU__)
+# pragma message "FL_HAIKU: FIXME"
+typedef void* Fl_Offscreen;
+typedef void* Fl_Bitmask;
+typedef void *Fl_Region;
+typedef  int FL_SOCKET;
+typedef void *GLContext;
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <dirent.h>
+
 #else /* X11 */
 
 typedef unsigned long Fl_Offscreen;
